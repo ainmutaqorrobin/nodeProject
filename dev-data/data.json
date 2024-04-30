@@ -1,0 +1,57 @@
+[
+  {
+    "id": 0,
+    "productName": "Ripe Bananas",
+    "image": "🍌",
+    "from": "Ecuador",
+    "nutrients": "Potassium, Vitamin B6",
+    "quantity": "6 🍌",
+    "price": "4.75",
+    "organic": true,
+    "description": "A ripe banana is firm to the touch and bright yellow with small brown specks. Bananas are a versatile fruit, rich in potassium and vitamins. They can be eaten raw, added to smoothies, or used in baking. Bananas are also a popular choice for snacking and are often included in breakfast meals."
+  },
+  {
+    "id": 1,
+    "productName": "Sun-Kissed Oranges",
+    "image": "🍊",
+    "from": "Florida, USA",
+    "nutrients": "Vitamin C, Fiber",
+    "quantity": "4 🍊",
+    "price": "6.50",
+    "organic": false,
+    "description": "Oranges are known for their vibrant color and juicy sweetness. They are packed with vitamin C and fiber, making them a nutritious choice for snacks or breakfast. Whether eaten fresh, juiced, or used in cooking, oranges add a burst of flavor and nutrition to any dish."
+  },
+  {
+    "id": 2,
+    "productName": "Crisp Red Apples",
+    "image": "🍎",
+    "from": "Washington, USA",
+    "nutrients": "Fiber, Vitamin C",
+    "quantity": "5 🍎",
+    "price": "3.75",
+    "organic": true,
+    "description": "Red apples are known for their crisp texture and sweet-tart flavor. They are a good source of fiber and vitamin C, making them a healthy snack choice. Apples can be enjoyed on their own, sliced into salads, or used in baking recipes. Their versatility and nutritional benefits make them a popular fruit choice."
+  },
+  {
+    "id": 3,
+    "productName": "Juicy Peaches",
+    "image": "🍑",
+    "from": "California, USA",
+    "nutrients": "Vitamin A, Vitamin C",
+    "quantity": "3 🍑",
+    "price": "5.00",
+    "organic": true,
+    "description": "Peaches are known for their juicy flesh and sweet flavor. They are a good source of vitamins A and C, as well as dietary fiber. Peaches can be eaten fresh, sliced into salads, or used in desserts such as pies and cobblers. Their delicious taste and nutritional benefits make them a popular summer fruit."
+  },
+  {
+    "id": 4,
+    "productName": "Sweet Strawberries",
+    "image": "🍓",
+    "from": "California, USA",
+    "nutrients": "Vitamin C, Folate",
+    "quantity": "500g",
+    "price": "7.00",
+    "organic": false,
+    "description": "Strawberries are prized for their sweet flavor and vibrant red color. They are rich in vitamin C and folate, making them a nutritious choice for snacks or desserts. Strawberries can be enjoyed fresh, added to smoothies, or used in baking recipes. Their versatility and delicious taste make them a favorite fruit for many people."
+  }
+]
