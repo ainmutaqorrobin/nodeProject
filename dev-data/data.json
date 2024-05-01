@@ -1,7 +1,7 @@
 [
   {
     "id": 0,
-    "productName": "Ripe Bananas",
+    "productName": "Bananas",
     "image": "🍌",
     "from": "Ecuador",
     "nutrients": "Potassium, Vitamin B6",
@@ -12,7 +12,7 @@
   },
   {
     "id": 1,
-    "productName": "Sun-Kissed Oranges",
+    "productName": "Orange",
     "image": "🍊",
     "from": "Florida, USA",
     "nutrients": "Vitamin C, Fiber",
@@ -23,7 +23,7 @@
   },
   {
     "id": 2,
-    "productName": "Crisp Red Apples",
+    "productName": "Apples",
     "image": "🍎",
     "from": "Washington, USA",
     "nutrients": "Fiber, Vitamin C",
@@ -34,7 +34,7 @@
   },
   {
     "id": 3,
-    "productName": "Juicy Peaches",
+    "productName": "Peaches",
     "image": "🍑",
     "from": "California, USA",
     "nutrients": "Vitamin A, Vitamin C",
@@ -45,7 +45,7 @@
   },
   {
     "id": 4,
-    "productName": "Sweet Strawberries",
+    "productName": "Strawberries",
     "image": "🍓",
     "from": "California, USA",
     "nutrients": "Vitamin C, Folate",

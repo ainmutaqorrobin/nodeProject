@@ -61,23 +61,28 @@ const responseObj = JSON.parse(response);
 const server = http.createServer((req, res) => {
   const pathURL = req.url;
 
+  //using ES6 destructuring
+  const { query, pathname } = url.parse(pathURL, true);
+
   //HOME PAGE
-  if ((pathURL === "/") | (pathURL === "/overview")) {
+  if ((pathname === "/") | (pathname === "/overview")) {
     res.writeHead(200, { "content-type": "text/html" });
     const cardsHTML = responseObj
       .map((item) => replaceTemplate(templateCard, item))
       .join("");
 
-    console.log(cardsHTML);
     const output = templateOverview.replace("%PRODUCT_CARDS%", cardsHTML);
     res.end(output);
   }
   //PRODUCT PAGE
-  else if (pathURL === "/product") {
-    res.end("welcome to product page");
+  else if (pathname === "/product") {
+    res.writeHead(200, { "content-type": "text/html" });
+    const product = responseObj[query.id];
+    const output = replaceTemplate(templateProduct, product);
+    res.end(output);
   }
   //API
-  else if (pathURL === "/api") {
+  else if (pathname === "/api") {
     res.writeHead(200, "request SUCCESSFUL", {
       "content-type": "application/json",
     });
