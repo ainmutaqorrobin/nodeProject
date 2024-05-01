@@ -2,6 +2,9 @@ const fs = require("fs");
 const http = require("http");
 const url = require("url");
 
+const response = fs.readFileSync(`${__dirname}/dev-data/data.json`, "utf-8");
+const responseObj = JSON.parse(response);
+
 //FILE
 // // const fileread = fs.readFileSync("./txt/input.txt", "utf-8");
 // // // console.log(fileread);
@@ -30,6 +33,11 @@ const server = http.createServer((req, res) => {
     res.end("welcome to overview page");
   } else if (pathURL === "/product") {
     res.end("welcome to product page");
+  } else if (pathURL === "/api") {
+    res.writeHead(200, "request SUCCESSFUL", {
+      "content-type": "application/json",
+    });
+    res.end(response);
   } else {
     res.writeHead(404, "Invalid page", {
       "Content-type": "text/html",
