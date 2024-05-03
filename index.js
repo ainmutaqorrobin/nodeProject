@@ -2,7 +2,7 @@ const fs = require("fs");
 const http = require("http");
 const url = require("url");
 const replaceTemplate = require("./modules/replaceTemplate");
-const slugify = require('slugify')
+const slugify = require("slugify");
 
 const response = fs.readFileSync(`${__dirname}/dev-data/data.json`, "utf-8");
 const templateProduct = fs.readFileSync(
@@ -20,7 +20,10 @@ const templateOverview = fs.readFileSync(
   "utf-8"
 );
 const responseObj = JSON.parse(response);
-
+const slugArray = responseObj.map((el) =>
+  slugify(el.productName, { lower: true })
+);
+console.log(slugArray);
 //FILE
 // // const fileread = fs.readFileSync("./txt/input.txt", "utf-8");
 // // // console.log(fileread);
