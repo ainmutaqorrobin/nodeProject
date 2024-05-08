@@ -1,0 +1,22 @@
+{
+  "name": "node-project",
+  "version": "1.0.0",
+  "description": "developing project using node",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "github.com/ainmutaqorrobin/nodeProject"
+  },
+  "author": "Ain Mutaqorrobin",
+  "license": "ISC",
+  "dependencies": {
+    "slugify": "^1.0.0",
+    "superagent": "^9.0.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.0"
+  }
+}

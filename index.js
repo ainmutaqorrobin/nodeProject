@@ -1,23 +1,9 @@
 const fs = require("fs");
 const http = require("http");
 const url = require("url");
+const replaceTemplate = require("./modules/replaceTemplate");
+const slugify = require("slugify");
 
-function replaceTemplate(temp, item) {
-  let output = temp.replace(/{%PRODUCTNAME%}/g, item.productName);
-  output = output.replace(/{%IMAGE%}/g, item.image);
-  output = output.replace(/{%PRICE%}/g, item.price);
-  output = output.replace(/{%FROM%}/g, item.from);
-  output = output.replace(/{%NUTRIENTS%}/g, item.nutrients);
-  output = output.replace(/{%QUANTITY%}/g, item.quantity);
-  output = output.replace(/{%DESCRIPTION%}/g, item.description);
-  output = output.replace(/{%ID%}/g, item.id);
-
-  if (!item.organic) {
-    output = output.replace(/{%NOT_ORGANIC%}/g, "not-organic");
-  }
-
-  return output;
-}
 const response = fs.readFileSync(`${__dirname}/dev-data/data.json`, "utf-8");
 const templateProduct = fs.readFileSync(
   `${__dirname}/templates/template-product.html`,
@@ -34,7 +20,10 @@ const templateOverview = fs.readFileSync(
   "utf-8"
 );
 const responseObj = JSON.parse(response);
-
+const slugArray = responseObj.map((el) =>
+  slugify(el.productName, { lower: true })
+);
+console.log(slugArray);
 //FILE
 // // const fileread = fs.readFileSync("./txt/input.txt", "utf-8");
 // // // console.log(fileread);
@@ -81,7 +70,7 @@ const server = http.createServer((req, res) => {
     const output = replaceTemplate(templateProduct, product);
     res.end(output);
   }
-  //API
+  //APIs
   else if (pathname === "/api") {
     res.writeHead(200, "request SUCCESSFUL", {
       "content-type": "application/json",
